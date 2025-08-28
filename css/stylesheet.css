@@ -1,0 +1,88 @@
+/* w3 schools initial style sheet */
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif
+}
+
+.w3-row-padding img {
+    margin-bottom: 12px
+}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {
+    width: 120px;
+    background: #222;
+}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {
+    margin-left: 120px
+}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {
+    #main {
+        margin-left: 0
+    }
+}
+
+/* subtext and font */
+.subtext {
+    color: rgba(255,255,255,0.25); /* same as .skill-cat */
+    font-size: 15px;
+}
+
+/* Skill badges */
+/* small uppercase labels like “Coding Languages”, “Tools”, “Soft Skills” */
+#skills .skills-category {
+    color: #bdbdbd; /* readable light gray on black */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    margin: 16px 0 6px; /* space above/below the label */
+}
+
+/* container so badges line up and wrap nicely on small screens */
+#skills .skills-badges {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* the pill itself */
+#skills .badge {
+    display: inline-block;
+    margin: 6px 8px 0 0; /* spacing between pills */
+    padding: 8px 12px; /* pill padding */
+    border-radius: 999px; /* fully rounded corners */
+    border: 1px solid rgba(255,255,255,0.25);
+    background: rgba(255,255,255,0.06); /* subtle on black */
+    color: #eaeaea; /* readable text color on black */
+    font-size: 14px;
+    transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+
+/* gentle hover feedback */
+#skills .badge:hover {
+    transform: translateY(-2px);
+    background: rgba(255,255,255,0.10);
+    box-shadow: 0 6px 14px rgba(0, 150, 255, .18); /* subtle glow */
+}
+
+/* Header of section */
+.section-title {
+    position: relative;
+    display: inline-block; /* underline width matches the text */
+    font-size: 28px; /* makes all section headers even */
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0 0 12px; /* small gap under the title */
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #00d4ff, #7a5cff);
+    border-radius: 2px;
+    /* “underglow” */
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.35), 0 0 12px rgba(122, 92, 255, 0.30);
+}
