@@ -24,7 +24,7 @@ body, h1, h2, h3, h4, h5, h6 {
 
 /* subtext and font */
 .subtext {
-    color: rgba(255,255,255,0.25); /* same as .skill-cat */
+    color: rgb(190, 190, 190, 0.70); /* same as .skill-cat */
     font-size: 15px;
 }
 
