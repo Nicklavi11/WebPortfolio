@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nick Laviano | Portfolio</title>
+  <title>Contact | Nick Laviano</title>
 
   <link rel="stylesheet" href="assets/css/styles.css" />
   <script defer src="assets/js/main.js"></script>
@@ -26,6 +26,15 @@
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobileNav">
         Menu
       </button>
+
+      <button
+        class="theme-toggle"
+        type="button"
+        aria-pressed="false"
+        aria-label="Toggle light mode"
+      >
+        Light
+      </button>
     </div>
 
     <nav id="mobileNav" class="mobile-nav" aria-label="Mobile Primary">
@@ -37,9 +46,86 @@
   </header>
 
   <main id="main">
-    <section class="container section">
-      <h1>Page Title</h1>
-      <p>Replace this with page content later.</p>
+    <!-- PAGE HEADER -->
+    <header class="page-head">
+      <div class="container">
+        <h1>Contact</h1>
+        <p>The easiest ways to get in touch with me.</p>
+      </div>
+    </header>
+
+    <!-- CONTACT CONTENT -->
+    <section class="section-tight">
+      <div class="container">
+        <div class="grid-2">
+          
+          <!-- CONTACT OPTIONS -->
+          <div class="card">
+            <h2 class="card-title">Get in Touch</h2>
+            <p class="muted">
+              Email and LinkedIn are the fastest ways to reach me.
+            </p>
+
+            <div class="stack">
+              <!-- UPDATE EMAIL BELOW -->
+              <a
+                class="btn primary"
+                href="mailto:nlavian@bgsu.edu?subject=Portfolio%20Contact"
+              >
+                Email Me
+              </a>
+
+              <a
+                class="btn"
+                href="https://www.linkedin.com/in/nicholas-laviano/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
+
+              <a
+                class="btn"
+                href="https://github.com/Nicklavi11"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub
+              </a>
+            </div>
+
+            <p class="muted small" style="margin-top: 14px;">
+              Clicking “Email Me” will open your email app with a subject line already filled in.
+            </p>
+          </div>
+
+          <!-- RESUME + INFO -->
+          <div class="card">
+            <h2 class="card-title">Resume</h2>
+            <p class="muted">
+              A detailed overview of my experience, projects, and skills.
+            </p>
+
+            <div class="stack">
+              <a
+                class="btn"
+                href="assets/Nicholas_Laviano_Resume.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View Resume (PDF)
+              </a>
+            </div>
+
+            <hr class="divider" />
+
+            <p class="muted small">
+              Open to internship opportunities in software engineering, QA, and security-focused roles.
+            </p>
+          </div>
+
+        </div>
+      </div>
     </section>
   </main>
 

@@ -26,6 +26,10 @@
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobileNav">
         Menu
       </button>
+      <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle light mode" > 
+        Light
+      </button>
+
     </div>
 
     <nav id="mobileNav" class="mobile-nav" aria-label="Mobile Primary">
@@ -37,11 +41,157 @@
   </header>
 
   <main id="main">
-    <section class="container section">
-      <h1>Page Title</h1>
-      <p>Replace this with page content later.</p>
-    </section>
-  </main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow">Software Engineering Student | Testing | Security</p>
+        <h1>Hi, I'm Nicholas Laviano.</h1>
+        <p class="lead">
+          I build reliable software and clean web experiences. I care about testing, security,
+          and writing code that is easy to maintain.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn primary" href="projects.html">View Projects</a>
+          <a class="btn" href="contact.html">Contact Me</a>
+        </div>
+
+        <div class="hero-links">
+          <a href="https://github.com/Nicklavi11" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/nicholas-laviano/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="docs/Nicholas_Laviano_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="card">
+          <h2 class="card-title">Quick Highlights</h2>
+          <ul class="checklist">
+            <li>B.S. Software Engineering, BGSU (Expected May 2026)</li>
+            <li>GPA 3.75, Dean’s List</li>
+            <li>Certified Trainer at Chipotle (16+ hrs/week)</li>
+            <li>Freelance WordPress redesign (Zone Aviation)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURRENTLY -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Currently</h2>
+        <p>What I am focused on right now.</p>
+      </div>
+
+      <div class="grid currently-grid">
+        <div class="card">
+          <h3>Building</h3>
+          <p>My portfolio v2 and a stronger projects page with clear outcomes and links.</p>
+        </div>
+
+        <div class="card">
+          <h3>Learning</h3>
+          <p>Software testing patterns, security basics, and writing cleaner code with better structure.</p>
+        </div>
+
+        <div class="card">
+          <h3>Looking for</h3>
+          <p>An internship where I can contribute in development, QA, or security-minded engineering.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECTS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Featured Projects</h2>
+        <p>Three projects that represent my skills best right now.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card project-card">
+          <h3>JUnit Testing Project</h3>
+          <p>Unit testing with JUnit + Maven, edge cases, and coverage improvements.</p>
+          <div class="tags">
+            <span class="tag">Java</span><span class="tag">JUnit</span><span class="tag">Maven</span>
+          </div>
+          <a class="card-link" href="projects.html" aria-label="See details for this project">See details</a>
+
+        </article>
+
+        <article class="card project-card">
+          <h3>Yahtzee Game</h3>
+          <p>Object-oriented C++ game with scoring, input validation, and teamwork.</p>
+          <div class="tags">
+            <span class="tag">C++</span><span class="tag">OOP</span>
+          </div>
+          <a class="card-link" href="projects.html" aria-label="See details for this project">See details</a>
+        </article>
+
+        <article class="card project-card">
+          <h3>Zone Aviation Website Redesign</h3>
+          <p>WordPress redesign with backups, updates, and security improvements.</p>
+          <div class="tags">
+            <span class="tag">WordPress</span><span class="tag">cPanel</span><span class="tag">Security</span>
+          </div>
+          <a class="card-link" href="projects.html" aria-label="See details for this project">See details</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS PREVIEW -->
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>Skills Snapshot</h2>
+        <p>A quick overview. The full list is on the Experience + Skills page.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Languages</h3>
+          <p>C++, C#, Java, JavaScript, HTML/CSS, SQL</p>
+        </div>
+
+        <div class="card">
+          <h3>Tools</h3>
+          <p>Git, VS Code, IntelliJ, JUnit, Maven, WordPress, cPanel</p>
+        </div>
+
+        <div class="card">
+          <h3>Strengths</h3>
+          <p>Debugging, collaboration, time management, analytical thinking</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT CTA -->
+  <section class="section cta">
+    <div class="container">
+      <div class="card cta-card">
+        <div class="cta-text">
+          <h2>Want to work together?</h2>
+          <p>
+            If you are hiring for internships or want to connect, send me a message.
+            I reply fast and I am easy to work with.
+          </p>
+        </div>
+
+        <div class="cta-actions">
+          <a class="btn primary" href="contact.html">Contact</a>
+          <a class="btn" href="projects.html">Projects</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
