@@ -57,34 +57,30 @@ if (themeBtn) {
   themeBtn.addEventListener("click", toggleTheme);
 }
 
-// Contact form (Formspree)
-const contactForm = document.getElementById("contactForm");
-const formStatus = document.getElementById("formStatus");
+// Copy email button (reliable alternative to mailto)
+const copyBtn = document.getElementById("copyEmailBtn");
+const copyStatus = document.getElementById("copyStatus");
 
-if (contactForm && formStatus) {
-  contactForm.addEventListener("submit", async (e) => {
-    const action = contactForm.getAttribute("action");
-    if (!action || action === "#") return; // not wired yet
-
-    e.preventDefault();
-    formStatus.textContent = "Sending...";
+if (copyBtn) {
+  copyBtn.addEventListener("click", async () => {
+    const email = copyBtn.getAttribute("data-email") || "";
 
     try {
-      const formData = new FormData(contactForm);
-      const res = await fetch(action, {
-        method: "POST",
-        body: formData,
-        headers: { Accept: "application/json" },
-      });
-
-      if (res.ok) {
-        contactForm.reset();
-        formStatus.textContent = "Message sent. Thanks!";
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(email);
       } else {
-        formStatus.textContent = "Something went wrong. Please try again.";
+        // Fallback for older browsers
+        const temp = document.createElement("textarea");
+        temp.value = email;
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand("copy");
+        temp.remove();
       }
+
+      if (copyStatus) copyStatus.textContent = "Email copied to clipboard.";
     } catch {
-      formStatus.textContent = "Network error. Please try again.";
+      if (copyStatus) copyStatus.textContent = "Could not copy. Email: " + email;
     }
   });
 }

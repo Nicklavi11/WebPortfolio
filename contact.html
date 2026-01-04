@@ -64,32 +64,19 @@
 
             <div class="stack">
               <!-- UPDATE EMAIL BELOW -->
-              <a
-                class="btn primary"
-                href="mailto:nlavian@bgsu.edu?subject=Portfolio%20Contact"
-              >
-                Email Me
-              </a>
+              <div class="stack">
+                <a class="btn primary" href="mailto:nlavian@bgsu.edu?subject=Portfolio%20Contact">Email Me</a>
 
-              <a
-                class="btn"
-                href="https://www.linkedin.com/in/nicholas-laviano/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                LinkedIn
-              </a>
+                <button class="btn" type="button" id="copyEmailBtn" data-email="nlavian@bgsu.edu">
+                  Copy Email Address
+                </button>
 
-              <a
-                class="btn"
-                href="https://github.com/Nicklavi11"
-                target="_blank"
-                rel="noreferrer"
-              >
-                GitHub
-              </a>
+                <a class="btn" href="https://www.linkedin.com/in/nicholas-laviano/" target="_blank" rel="noreferrer">LinkedIn</a>
+                <a class="btn" href="https://github.com/Nicklavi11" target="_blank" rel="noreferrer">GitHub</a>
+
+                <p class="muted small" id="copyStatus" role="status" aria-live="polite"></p>
+              </div>
             </div>
-
             <p class="muted small" style="margin-top: 14px;">
               Clicking “Email Me” will open your email app with a subject line already filled in.
             </p>
