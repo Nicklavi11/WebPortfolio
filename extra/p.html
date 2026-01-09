@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>For You</title>
+
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="stylesheet" href="assets/css/extra.css" />
+  <script defer src="assets/js/extra.js"></script>
+</head>
+
+<body>
+  <main class="wrap">
+    <div class="love-card" id="secretCard">
+      <!-- Header -->
+      <header class="love-header">
+        <div class="love-badge" aria-hidden="true">♡</div>
+        <div>
+          <h1 class="love-title" id="loveTitle"></h1>
+          <p class="love-subtitle" id="loveSubtitle"></p>
+        </div>
+      </header>
+
+      <!-- Photo grid -->
+      <section class="photo-grid" aria-label="Photo memories">
+        <figure class="photo">
+          <img src="assets/img/a.jpg" alt="Us photo 1" loading="lazy" />
+        </figure>
+        <figure class="photo">
+          <img src="assets/img/b.jpg" alt="Us photo 2" loading="lazy" />
+        </figure>
+        <figure class="photo">
+          <img src="assets/img/c.jpg" alt="Us photo 3" loading="lazy" />
+        </figure>
+        <figure class="photo">
+          <img src="assets/img/d.jpg" alt="Us photo 4" loading="lazy" />
+        </figure>
+      </section>
+
+      <!-- Main message area -->
+      <section class="message">
+        <h2 id="messageTitle"></h2>
+
+        <p class="muted" id="messageBody"></p>
+
+        <div class="chips" aria-label="Reasons I love you" id="chipsWrap"></div>
+      </section>
+
+      <!-- Card section -->
+      <section class="memories" aria-label="Story card">
+        <h2 class="section-title" id="storySectionTitle"></h2>
+
+        <div class="story-card">
+          <header class="story-card__header"></header>
+          <div class="story-card__body">
+            <p class="muted small" id="cardBody1"></p>
+            <p class="muted small" id="cardBody2" style="margin-top:10px;"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Days together -->
+      <section class="days-together" aria-label="Time together">
+        <div class="days-heart" aria-hidden="true">♥</div>
+
+        <div class="days-text">
+          <h2 class="days-title">Time together</h2>
+
+          <p class="days-count">
+            <span id="togetherYears">0</span>y
+            <span id="togetherMonths">0</span>m
+            <span id="togetherDays">0</span>d
+          </p>
+
+          <p class="days-clock">
+            <span id="togetherHours">00</span>:
+            <span id="togetherMinutes">00</span>:
+            <span id="togetherSeconds">00</span>
+          </p>
+
+          <p class="muted small" id="daysSubtext"></p>
+        </div>
+      </section>
+
+      <!-- Actions -->
+      <footer class="love-actions">
+        <a class="btn-soft" href="./">Back</a>
+        <button class="btn-solid" type="button" id="lockBtn">Lock</button>
+      </footer>
+    </div>
+  </main>
+</body>
+</html>

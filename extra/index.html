@@ -4,24 +4,55 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Extra</title>
-  <link rel="stylesheet" href="assets/extra.css" />
-  <script defer src="assets/extra.js"></script>
+
+  <link rel="stylesheet" href="assets/css/extra.css" />
+  <script defer src="assets/js/extra.js"></script>
 </head>
+
 <body>
-  <main class="container">
-    <div class="card">
-      <h1 style="margin:0 0 6px;">Private</h1>
-      <p class="muted" style="margin:0;">Enter password to continue.</p>
+  <main class="wrap">
+    <div class="love-card">
+      <header class="love-header">
+        <div class="love-badge" aria-hidden="true">🔒</div>
+        <div>
+          <h1 class="love-title">Private</h1>
+          <p class="love-subtitle">Enter password to continue.</p>
+        </div>
+      </header>
 
-      <form id="gateForm">
-        <label>
-          Password
-          <input id="pw" type="password" autocomplete="current-password" required />
-        </label>
+      <section class="message">
+        <form id="gateForm" style="display:grid; gap:12px; padding-top:6px;">
+          <label style="display:grid; gap:6px;">
+            <span class="muted small">Password</span>
+            <input
+              id="pw"
+              type="password"
+              autocomplete="current-password"
+              required
+              style="padding:10px 12px; border-radius:14px; border:1px solid var(--border);"
+            />
+          </label>
 
-        <button type="submit">Unlock</button>
-        <p class="muted small" id="status" role="status" aria-live="polite"></p>
-      </form>
+          <button
+            class="btn-solid"
+            type="submit"
+            style="width:fit-content;"
+          >
+            Unlock
+          </button>
+
+          <p class="muted small" id="status" role="status" aria-live="polite"></p>
+        </form>
+
+        <p class="muted small" style="margin-top:14px;">
+          Note: This page is made for fun, there is not security to bypass the page, but it is a fun page made for friends or family, if you do not know what the password could be, it was not made for you!
+        </p>
+      </section>
+
+      <footer class="love-actions">
+        <a class="btn-soft" href="../">Back</a>
+        <span class="muted small">Extra</span>
+      </footer>
     </div>
   </main>
 </body>
