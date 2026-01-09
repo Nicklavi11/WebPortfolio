@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Extra</title>
+  <link rel="stylesheet" href="assets/extra.css" />
+  <script defer src="assets/extra.js"></script>
+</head>
+<body>
+  <main class="container">
+    <div class="card">
+      <h1 style="margin:0 0 6px;">Private</h1>
+      <p class="muted" style="margin:0;">Enter password to continue.</p>
+
+      <form id="gateForm">
+        <label>
+          Password
+          <input id="pw" type="password" autocomplete="current-password" required />
+        </label>
+
+        <button type="submit">Unlock</button>
+        <p class="muted small" id="status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
