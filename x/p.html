@@ -8,13 +8,14 @@
   <meta name="robots" content="noindex, nofollow" />
 
   <link rel="stylesheet" href="assets/css/extra.css" />
+
+  <script defer src="assets/js/data.js"></script>
   <script defer src="assets/js/extra.js"></script>
 </head>
 
 <body>
   <main class="wrap">
     <div class="love-card" id="secretCard">
-      <!-- Header -->
       <header class="love-header">
         <div class="love-badge" aria-hidden="true">♡</div>
         <div>
@@ -23,45 +24,27 @@
         </div>
       </header>
 
-      <!-- Photo grid -->
-      <section class="photo-grid" aria-label="Photo memories">
-        <figure class="photo">
-          <img src="assets/img/a.jpg" alt="Us photo 1" loading="lazy" />
-        </figure>
-        <figure class="photo">
-          <img src="assets/img/b.jpg" alt="Us photo 2" loading="lazy" />
-        </figure>
-        <figure class="photo">
-          <img src="assets/img/c.jpg" alt="Us photo 3" loading="lazy" />
-        </figure>
-        <figure class="photo">
-          <img src="assets/img/d.jpg" alt="Us photo 4" loading="lazy" />
-        </figure>
-      </section>
+      <section class="photo-grid" aria-label="Photo memories" id="photoGrid"></section>
 
-      <!-- Main message area -->
       <section class="message">
         <h2 id="messageTitle"></h2>
-
         <p class="muted" id="messageBody"></p>
-
         <div class="chips" aria-label="Reasons I love you" id="chipsWrap"></div>
       </section>
 
-      <!-- Card section -->
       <section class="memories" aria-label="Story card">
         <h2 class="section-title" id="storySectionTitle"></h2>
 
         <div class="story-card">
-          <header class="story-card__header"></header>
-          <div class="story-card__body">
-            <p class="muted small" id="cardBody1"></p>
-            <p class="muted small" id="cardBody2" style="margin-top:10px;"></p>
-          </div>
+          <header class="story-card__header">
+            <h3 id="cardHeaderTitle"></h3>
+            <p class="muted small" id="cardHeaderSubtitle"></p>
+          </header>
+
+          <div class="story-card__body" id="cardBody"></div>
         </div>
       </section>
 
-      <!-- Days together -->
       <section class="days-together" aria-label="Time together">
         <div class="days-heart" aria-hidden="true">♥</div>
 
@@ -84,8 +67,8 @@
         </div>
       </section>
 
-      <!-- Actions -->
       <footer class="love-actions">
+        <a class="btn-soft" href="archives.html">Archives</a>
         <a class="btn-soft" href="./">Back</a>
         <button class="btn-solid" type="button" id="lockBtn">Lock</button>
       </footer>
