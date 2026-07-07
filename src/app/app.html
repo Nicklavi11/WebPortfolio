@@ -1,0 +1,229 @@
+<div class="site-shell" [class.light-mode]="lightMode()">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="#home" (click)="closeMobileNav()">
+      <span class="brand-mark">NL</span>
+      <span>Nicholas Laviano</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" (click)="toggleTheme()" [attr.aria-pressed]="lightMode()">
+        {{ lightMode() ? 'Dark' : 'Light' }}
+      </button>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        [attr.aria-expanded]="mobileNavOpen()"
+        (click)="toggleMobileNav()"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  @if (mobileNavOpen()) {
+    <nav class="mobile-nav" aria-label="Mobile Primary">
+      <a href="#projects" (click)="closeMobileNav()">Projects</a>
+      <a href="#experience" (click)="closeMobileNav()">Experience</a>
+      <a href="#skills" (click)="closeMobileNav()">Skills</a>
+      <a href="#contact" (click)="closeMobileNav()">Contact</a>
+    </nav>
+  }
+
+  <main id="main">
+    <section id="home" class="hero section-band">
+      <div class="hero-copy">
+        <p class="eyebrow">Software Engineering Student | Testing | Security</p>
+        <h1>Modern software portfolio for a reliability-minded developer.</h1>
+        <p class="lead">
+          Hi, I'm Nicholas Laviano. I build clean web experiences, testable software, and maintainable systems with a focus on quality, security, and clear communication.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="mailto:nlavian@bgsu.edu?subject=Portfolio%20Contact">Contact Me</a>
+        </div>
+
+        <div class="social-links" aria-label="Social links">
+          @for (social of socials; track social.label) {
+            <a [href]="social.href" target="_blank" rel="noreferrer">{{ social.label }}</a>
+          }
+        </div>
+      </div>
+
+      <aside class="hero-panel" aria-label="Quick highlights">
+        <div class="availability">Open to software, QA, and security-focused roles</div>
+        <h2>Quick Highlights</h2>
+        <ul>
+          @for (highlight of highlights; track highlight) {
+            <li>{{ highlight }}</li>
+          }
+        </ul>
+      </aside>
+    </section>
+
+    <section class="section-band stats-band" aria-label="Portfolio snapshot">
+      <div class="stat">
+        <strong>7</strong>
+        <span>Featured projects</span>
+      </div>
+      <div class="stat">
+        <strong>3.72</strong>
+        <span>BGSU GPA</span>
+      </div>
+      <div class="stat">
+        <strong>2026</strong>
+        <span>Expected graduation</span>
+      </div>
+      <div class="stat">
+        <strong>2025+</strong>
+        <span>Client web work</span>
+      </div>
+    </section>
+
+    <section id="projects" class="section-band">
+      <div class="section-head">
+        <p class="eyebrow">Selected work</p>
+        <h2>Projects with real engineering practice behind them.</h2>
+        <p>
+          These projects show software design, testing, refactoring, research, security updates, and team-based delivery.
+        </p>
+      </div>
+
+      <div class="featured-grid">
+        @for (project of featuredProjects; track project.title) {
+          <article class="feature-card">
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.summary }}</p>
+            <div class="tags">
+              @for (tag of project.tags; track tag) {
+                <span>{{ tag }}</span>
+              }
+            </div>
+          </article>
+        }
+      </div>
+
+      <div class="project-grid">
+        @for (project of projects; track project.title) {
+          <article class="project-card">
+            <div>
+              <h3>{{ project.title }}</h3>
+              <p>{{ project.summary }}</p>
+            </div>
+
+            <ul>
+              @for (bullet of project.bullets; track bullet) {
+                <li>{{ bullet }}</li>
+              }
+            </ul>
+
+            <div class="tags">
+              @for (tag of project.tags; track tag) {
+                <span>{{ tag }}</span>
+              }
+            </div>
+
+            <div class="card-links">
+              @for (link of project.links; track link.label) {
+                @if (link.href) {
+                  <a [href]="link.href" target="_blank" rel="noreferrer">{{ link.label }}</a>
+                } @else {
+                  <span>{{ link.label }}</span>
+                }
+              }
+            </div>
+          </article>
+        }
+      </div>
+    </section>
+
+    <section id="experience" class="section-band split-section">
+      <div class="section-head compact">
+        <p class="eyebrow">Experience + education</p>
+        <h2>Practical work, steady growth, and a software engineering foundation.</h2>
+        <p>
+          I am studying Software Engineering at Bowling Green State University and applying that coursework through client work, team projects, testing, and design.
+        </p>
+      </div>
+
+      <div class="timeline">
+        @for (item of experience; track item.role) {
+          <article class="timeline-item">
+            <p class="date">{{ item.date }}</p>
+            <h3>{{ item.role }}</h3>
+            <p class="org">{{ item.org }}</p>
+            <ul>
+              @for (bullet of item.bullets; track bullet) {
+                <li>{{ bullet }}</li>
+              }
+            </ul>
+          </article>
+        }
+
+        <article class="timeline-item education">
+          <p class="date">Expected 2026</p>
+          <h3>B.S. Software Engineering</h3>
+          <p class="org">Bowling Green State University</p>
+          <p>GPA: 3.72 | Dean's List</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section-band">
+      <div class="section-head">
+        <p class="eyebrow">Technical toolkit</p>
+        <h2>Skills for building, testing, and improving software.</h2>
+      </div>
+
+      <div class="skills-grid">
+        @for (group of skillGroups; track group.title) {
+          <article class="skill-card">
+            <h3>{{ group.title }}</h3>
+            <div class="tags">
+              @for (skill of group.skills; track skill) {
+                <span>{{ skill }}</span>
+              }
+            </div>
+          </article>
+        }
+      </div>
+    </section>
+
+    <section id="contact" class="section-band contact-band">
+      <div>
+        <p class="eyebrow">Let's connect</p>
+        <h2>Want to work together?</h2>
+        <p>
+          I am open to internship opportunities, co-ops, part-time/full-time software roles, QA roles, and security-focused engineering work.
+        </p>
+      </div>
+
+      <div class="contact-actions">
+        <a class="btn primary" href="mailto:nlavian@bgsu.edu?subject=Portfolio%20Contact">Email Me</a>
+        <button class="btn" type="button" (click)="copyEmail()">Copy Email</button>
+        <a class="btn" href="assets/docs/Nicholas_Laviano_Resume.pdf" target="_blank" rel="noreferrer">View Resume</a>
+        <p class="copy-status" role="status" aria-live="polite">{{ copyStatus() }}</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© {{ currentYear }} Nicholas Laviano</p>
+    <div>
+      <a href="https://github.com/Nicklavi11" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/nicholas-laviano/" target="_blank" rel="noreferrer">LinkedIn</a>
+    </div>
+  </footer>
+</div>
