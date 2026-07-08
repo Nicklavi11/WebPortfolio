@@ -1,4 +1,4 @@
-<div class="site-shell" [class.light-mode]="lightMode()">
+<div class="site-shell">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
@@ -15,9 +15,6 @@
     </nav>
 
     <div class="header-actions">
-      <button class="theme-toggle" type="button" (click)="toggleTheme()" [attr.aria-pressed]="lightMode()">
-        {{ lightMode() ? 'Dark' : 'Light' }}
-      </button>
       <button
         class="nav-toggle"
         type="button"
@@ -44,10 +41,10 @@
   <main id="main">
     <section id="home" class="hero section-band">
       <div class="hero-copy">
-        <p class="eyebrow">Software Engineering Student | Testing | Security</p>
-        <h1>Modern software portfolio for a reliability-minded developer.</h1>
+        <p class="eyebrow">Full-Stack Developer | Entry-Level Technical Candidate</p>
+        <h1>Developer ready to build, learn, and contribute on day one.</h1>
         <p class="lead">
-          Hi, I'm Nicholas Laviano. I build clean web experiences, testable software, and maintainable systems with a focus on quality, security, and clear communication.
+          Hi, I'm Nicholas Laviano. I am graduating with a software engineering degree on August 8, 2026, and I am looking for a full-time technical role where I can grow into a strong full-stack developer. I care about clean code, useful software, clear communication, and solving problems with steady effort.
         </p>
 
         <div class="hero-actions">
@@ -63,7 +60,7 @@
       </div>
 
       <aside class="hero-panel" aria-label="Quick highlights">
-        <div class="availability">Open to software, QA, and security-focused roles</div>
+        <div class="availability">Open to full-time entry-level technical roles</div>
         <h2>Quick Highlights</h2>
         <ul>
           @for (highlight of highlights; track highlight) {
@@ -79,12 +76,12 @@
         <span>Featured projects</span>
       </div>
       <div class="stat">
-        <strong>3.72</strong>
+        <strong>3.75</strong>
         <span>BGSU GPA</span>
       </div>
       <div class="stat">
-        <strong>2026</strong>
-        <span>Expected graduation</span>
+        <strong>Aug 8</strong>
+        <span>Graduation date</span>
       </div>
       <div class="stat">
         <strong>2025+</strong>
@@ -152,9 +149,9 @@
     <section id="experience" class="section-band split-section">
       <div class="section-head compact">
         <p class="eyebrow">Experience + education</p>
-        <h2>Practical work, steady growth, and a software engineering foundation.</h2>
+        <h2>Internship experience, client work, and a software engineering foundation.</h2>
         <p>
-          I am studying Software Engineering at Bowling Green State University and applying that coursework through client work, team projects, testing, and design.
+          I am finishing my Software Engineering degree at Bowling Green State University while building practical experience through an IT internship, client web work, team projects, testing, and design.
         </p>
       </div>
 
@@ -173,10 +170,10 @@
         }
 
         <article class="timeline-item education">
-          <p class="date">Expected 2026</p>
+          <p class="date">Graduating August 8, 2026</p>
           <h3>B.S. Software Engineering</h3>
           <p class="org">Bowling Green State University</p>
-          <p>GPA: 3.72 | Dean's List</p>
+          <p>GPA: 3.75 | Dean's List</p>
         </article>
       </div>
     </section>
@@ -206,7 +203,7 @@
         <p class="eyebrow">Let's connect</p>
         <h2>Want to work together?</h2>
         <p>
-          I am open to internship opportunities, co-ops, part-time/full-time software roles, QA roles, and security-focused engineering work.
+          I am looking for a full-time entry-level technical role, ideally in full-stack development, but I am also open to software, IT, QA, support engineering, and security-minded roles where I can contribute and keep growing.
         </p>
       </div>
 

@@ -1,8 +1,8 @@
 :root {
   color-scheme: dark;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #07111f;
-  color: #e8eef7;
+  background: #020617;
+  color: #edf7ff;
   scroll-behavior: smooth;
 }
 
@@ -13,7 +13,7 @@
 body {
   margin: 0;
   min-width: 320px;
-  background: #07111f;
+  background: #020617;
 }
 
 a {
@@ -27,36 +27,26 @@ textarea {
 }
 
 .site-shell {
-  --bg: #07111f;
-  --surface: rgba(14, 27, 47, 0.82);
-  --surface-strong: #10223d;
-  --text: #e8eef7;
-  --muted: #a9b7ca;
-  --line: rgba(167, 188, 214, 0.2);
+  --bg: #020617;
+  --surface: rgba(5, 14, 30, 0.84);
+  --surface-strong: #071225;
+  --text: #edf7ff;
+  --muted: #9eb3ca;
+  --line: rgba(125, 211, 252, 0.2);
   --accent: #38bdf8;
-  --accent-2: #22c55e;
-  --shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+  --accent-2: #7dd3fc;
+  --accent-3: #0ea5e9;
+  --shadow: 0 26px 90px rgba(0, 0, 0, 0.58);
   min-height: 100vh;
   overflow-x: hidden;
   color: var(--text);
   background:
-    radial-gradient(circle at 10% 0%, rgba(56, 189, 248, 0.22), transparent 30%),
-    radial-gradient(circle at 85% 5%, rgba(34, 197, 94, 0.16), transparent 24%),
-    linear-gradient(180deg, #07111f 0%, #091728 46%, #07111f 100%);
-}
-
-.site-shell.light-mode {
-  --bg: #f5f8fc;
-  --surface: rgba(255, 255, 255, 0.88);
-  --surface-strong: #ffffff;
-  --text: #0d1726;
-  --muted: #526174;
-  --line: rgba(41, 55, 76, 0.14);
-  --shadow: 0 24px 70px rgba(30, 41, 59, 0.14);
-  background:
-    radial-gradient(circle at 10% 0%, rgba(56, 189, 248, 0.2), transparent 30%),
-    radial-gradient(circle at 85% 5%, rgba(34, 197, 94, 0.12), transparent 24%),
-    linear-gradient(180deg, #f5f8fc 0%, #eef5fb 48%, #f8fbff 100%);
+    linear-gradient(90deg, rgba(125, 211, 252, 0.04) 1px, transparent 1px),
+    linear-gradient(rgba(125, 211, 252, 0.035) 1px, transparent 1px),
+    radial-gradient(circle at 12% 4%, rgba(14, 165, 233, 0.34), transparent 28%),
+    radial-gradient(circle at 82% 2%, rgba(125, 211, 252, 0.16), transparent 22%),
+    linear-gradient(180deg, #020617 0%, #031021 45%, #020617 100%);
+  background-size: 56px 56px, 56px 56px, auto, auto, auto;
 }
 
 .skip-link {
@@ -95,7 +85,7 @@ textarea {
   margin-top: 12px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  background: rgba(3, 10, 24, 0.9);
   padding: 12px 14px;
   box-shadow: var(--shadow);
   backdrop-filter: blur(18px);
@@ -125,8 +115,9 @@ textarea {
   height: 36px;
   place-items: center;
   border-radius: 8px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  background: linear-gradient(135deg, #e0f2fe, var(--accent));
   color: #031321;
+  box-shadow: 0 0 26px rgba(56, 189, 248, 0.46);
 }
 
 .site-nav {
@@ -161,7 +152,6 @@ textarea {
   gap: 8px;
 }
 
-.theme-toggle,
 .nav-toggle,
 .btn {
   border: 1px solid var(--line);
@@ -169,10 +159,6 @@ textarea {
   background: var(--surface-strong);
   color: var(--text);
   cursor: pointer;
-}
-
-.theme-toggle {
-  padding: 9px 12px;
 }
 
 .nav-toggle {
@@ -221,6 +207,19 @@ textarea {
   align-items: center;
   gap: 32px;
   min-height: calc(100vh - 84px);
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 12% 45% auto auto;
+  width: 220px;
+  height: 220px;
+  border: 1px solid rgba(125, 211, 252, 0.22);
+  border-radius: 50%;
+  box-shadow: 0 0 90px rgba(56, 189, 248, 0.24);
+  pointer-events: none;
 }
 
 .eyebrow {
@@ -244,6 +243,8 @@ h1 {
   margin-bottom: 18px;
   font-size: clamp(3rem, 7vw, 6.5rem);
   line-height: 0.92;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
 }
 
 h2 {
@@ -295,9 +296,10 @@ h3 {
 
 .btn.primary {
   border-color: transparent;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  background: linear-gradient(135deg, #e0f2fe, var(--accent));
   color: #031321;
   font-weight: 850;
+  box-shadow: 0 12px 36px rgba(56, 189, 248, 0.24);
 }
 
 .social-links a,
@@ -321,14 +323,17 @@ h3 {
 
 .hero-panel {
   padding: 24px;
+  background:
+    linear-gradient(145deg, rgba(14, 165, 233, 0.16), transparent 42%),
+    rgba(5, 14, 30, 0.9);
 }
 
 .availability {
   width: fit-content;
   margin-bottom: 20px;
   border-radius: 8px;
-  background: rgba(34, 197, 94, 0.16);
-  color: #85efac;
+  background: rgba(56, 189, 248, 0.14);
+  color: #bae6fd;
   padding: 8px 10px;
   font-size: 0.86rem;
   font-weight: 750;
@@ -353,7 +358,7 @@ h3 {
 .stat {
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.05);
+  background: linear-gradient(145deg, rgba(14, 165, 233, 0.11), rgba(2, 6, 23, 0.72));
   padding: 18px;
 }
 
@@ -421,7 +426,7 @@ h3 {
   border: 1px solid rgba(56, 189, 248, 0.28);
   border-radius: 999px;
   background: rgba(56, 189, 248, 0.1);
-  color: color-mix(in srgb, var(--accent) 70%, var(--text));
+  color: #bae6fd;
   padding: 7px 10px;
   font-size: 0.84rem;
   font-weight: 700;
@@ -450,7 +455,7 @@ h3 {
 }
 
 .education {
-  background: linear-gradient(135deg, rgba(56, 189, 248, 0.16), rgba(34, 197, 94, 0.1));
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.16), rgba(2, 6, 23, 0.6));
 }
 
 .skills-grid {

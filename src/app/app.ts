@@ -8,7 +8,6 @@ import { Component, signal } from '@angular/core';
 export class App {
   protected readonly currentYear = new Date().getFullYear();
   protected readonly mobileNavOpen = signal(false);
-  protected readonly lightMode = signal(false);
   protected readonly copyStatus = signal('');
 
   protected readonly socials = [
@@ -18,18 +17,18 @@ export class App {
   ];
 
   protected readonly highlights = [
-    'B.S. Software Engineering, BGSU (Expected 2026)',
-    'GPA 3.72, Dean\'s List',
-    'Client website redesign and security updates',
-    'Strong background in software testing and debugging',
-    'Experience with software design, refactoring, and code quality'
+    'B.S. Software Engineering, BGSU - Graduating August 8, 2026',
+    '3.75 GPA and Dean\'s List recognition',
+    'Seeking full-time entry-level software, full-stack, IT, QA, or technical roles',
+    'Medical Mutual IT internship experience with .NET, C#, debugging, and user stories',
+    'Hands-on background in client web work, testing, refactoring, and AI-assisted development'
   ];
 
   protected readonly featuredProjects = [
     {
-      title: 'Capstone: Texas Hold\'em Probability Program',
-      summary: 'Python training tool that simulates preflop poker decisions and teaches when to push or fold using probability, game theory, and backwards induction concepts.',
-      tags: ['Python', 'Pytest', 'Algorithms', 'Team Project']
+      title: 'Capstone: Texas Hold\'em Survival Simulation',
+      summary: 'Built a survival poker game mode with full poker flow, chip pressure, blinds, an opponent bot, and probability-assisted decisions.',
+      tags: ['Python', 'Simulation', 'Game Logic', 'Team Project']
     },
     {
       title: 'Website Redesign',
@@ -45,14 +44,15 @@ export class App {
 
   protected readonly projects = [
     {
-      title: 'Capstone: Texas Hold\'em Probability Program',
-      summary: 'A Python program that simulates a Texas Hold\'em game and trains users when to push or fold based on preflop card probability.',
+      title: 'Capstone: Texas Hold\'em Survival Simulation',
+      summary: 'A Python poker simulation where the user starts with 100 chips against an opponent with 1000 chips, playing 5-10 blinds in a survival-style game mode.',
       bullets: [
-        'Built a hand evaluation and decision recommendation engine for all-in decisions.',
-        'Used algorithms, math, game theory, and backwards induction concepts.',
+        'Recreated the full poker workflow for the Survival mode, including blinds, chip stacks, game progression, and decision flow.',
+        'Built a poker bot opponent so the user could play against automated decisions instead of a static simulation.',
+        'Connected the game mode to the probability program so recommendations could help the user make stronger choices.',
         'Worked with unit tests, CI, code reviews, documentation, weekly sprints, and monthly iterations in GitLab.'
       ],
-      tags: ['Python', 'Refactoring', 'Pytest', 'Sprints', 'GitLab', 'Team Project'],
+      tags: ['Python', 'Simulation', 'Poker Bot', 'Probability', 'Pytest', 'GitLab'],
       links: [{ label: 'In Progress', href: '' }]
     },
     {
@@ -90,7 +90,7 @@ export class App {
     },
     {
       title: 'Website Redesign',
-      summary: 'Ongoing freelance website redesign for a real business, focused on security, reliability, and modernizing a live production website.',
+      summary: 'Freelance website redesign for a real business, focused on security, reliability, and modernizing a live production website.',
       bullets: [
         'Worked directly with the client to gather requirements and update content.',
         'Added an SSL certificate and improved site security.',
@@ -130,11 +130,22 @@ export class App {
 
   protected readonly experience = [
     {
+      role: 'IT Intern',
+      org: 'Medical Mutual',
+      date: 'May 2026 - August 2026',
+      bullets: [
+        'Learned and applied .NET framework concepts, C#, debugging, troubleshooting, and corporate development workflows.',
+        'Worked with user stories, spike investigations, and technical research to understand and support team delivery.',
+        'Practiced prompt engineering and an AI-first approach to speed up investigation, learning, and problem solving.',
+        'Gained experience communicating in a professional technical environment with real business processes.'
+      ]
+    },
+    {
       role: 'Website Designer',
       org: 'Zone Aviation',
-      date: '2025 - Present',
+      date: '2025 - May 2026',
       bullets: [
-        'Coordinate directly with the client to gather requirements and update website content.',
+        'Coordinated directly with the client to gather requirements and update website content.',
         'Added SSL and managed backend updates.',
         'Created backups and tested changes locally before deploying to the live site.',
         'Fixed broken links, replaced outdated images, and improved site navigation.'
@@ -143,7 +154,7 @@ export class App {
     {
       role: 'Certified Trainer',
       org: 'Chipotle',
-      date: '2022 - Present',
+      date: '2022 - July 2026',
       bullets: [
         'Train new employees on procedures and quality standards in a fast-paced environment.',
         'Practice communication, teamwork, and reliability while balancing college coursework.'
@@ -152,10 +163,10 @@ export class App {
   ];
 
   protected readonly skillGroups = [
-    { title: 'Languages', skills: ['C++', 'C', 'Java', 'JavaScript', 'HTML/CSS', 'SQL', 'Python'] },
+    { title: 'Languages', skills: ['C#', 'C++', 'C', 'Java', 'JavaScript', 'HTML/CSS', 'SQL', 'Python'] },
+    { title: 'Full-Stack + IT', skills: ['.NET Framework', 'User Stories', 'Spike Investigations', 'Troubleshooting', 'Corporate Workflow'] },
     { title: 'Testing + Quality', skills: ['JUnit', 'Pytest', 'Refactoring', 'CI', 'Debugging'] },
-    { title: 'Tools', skills: ['Git', 'GitHub', 'GitLab', 'Maven', 'CMake', 'OMNeT++'] },
-    { title: 'Concepts', skills: ['OOP', 'SOLID', 'UML', 'Cohesion/Coupling', 'Security-minded Engineering'] }
+    { title: 'Tools + Concepts', skills: ['Git', 'GitHub', 'GitLab', 'Maven', 'CMake', 'OOP', 'SOLID', 'Prompt Engineering', 'AI-First Development'] }
   ];
 
   protected toggleMobileNav(): void {
@@ -164,10 +175,6 @@ export class App {
 
   protected closeMobileNav(): void {
     this.mobileNavOpen.set(false);
-  }
-
-  protected toggleTheme(): void {
-    this.lightMode.update((enabled) => !enabled);
   }
 
   protected async copyEmail(): Promise<void> {
