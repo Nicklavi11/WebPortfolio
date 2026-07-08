@@ -28,11 +28,11 @@ textarea {
 
 .site-shell {
   --bg: #020617;
-  --surface: rgba(5, 14, 30, 0.84);
-  --surface-strong: #071225;
+  --surface: rgba(13, 28, 53, 0.86);
+  --surface-strong: #10243f;
   --text: #edf7ff;
-  --muted: #9eb3ca;
-  --line: rgba(125, 211, 252, 0.2);
+  --muted: #b3c7db;
+  --line: rgba(147, 197, 253, 0.26);
   --accent: #38bdf8;
   --accent-2: #7dd3fc;
   --accent-3: #0ea5e9;
@@ -42,11 +42,12 @@ textarea {
   color: var(--text);
   position: relative;
   background:
-    radial-gradient(ellipse at 18% 10%, rgba(14, 165, 233, 0.3), transparent 34%),
-    radial-gradient(ellipse at 78% 0%, rgba(125, 211, 252, 0.18), transparent 28%),
-    linear-gradient(135deg, rgba(56, 189, 248, 0.08) 0 1px, transparent 1px 26px),
-    linear-gradient(180deg, #020617 0%, #030b1c 38%, #01040d 100%);
-  background-size: auto, auto, 28px 28px, auto;
+    radial-gradient(ellipse at 50% -10%, rgba(59, 130, 246, 0.26), transparent 34%),
+    radial-gradient(ellipse at 8% 28%, rgba(14, 165, 233, 0.16), transparent 28%),
+    radial-gradient(ellipse at 92% 42%, rgba(125, 211, 252, 0.1), transparent 24%),
+    linear-gradient(120deg, rgba(125, 211, 252, 0.06) 0 1px, transparent 1px 30px),
+    linear-gradient(180deg, #01030a 0%, #020617 36%, #02040b 100%);
+  background-size: auto, auto, auto, 30px 30px, auto;
 }
 
 .site-shell::before {
@@ -56,9 +57,10 @@ textarea {
   z-index: 0;
   pointer-events: none;
   background:
-    linear-gradient(115deg, transparent 0 38%, rgba(56, 189, 248, 0.08) 39%, transparent 44%),
-    radial-gradient(circle at 50% 110%, rgba(14, 165, 233, 0.16), transparent 38%);
-  mask-image: linear-gradient(to bottom, black, transparent 85%);
+    linear-gradient(115deg, transparent 0 34%, rgba(56, 189, 248, 0.1) 35%, transparent 41%),
+    linear-gradient(245deg, transparent 0 58%, rgba(147, 197, 253, 0.07) 59%, transparent 64%),
+    radial-gradient(circle at 50% 108%, rgba(14, 165, 233, 0.2), transparent 36%);
+  mask-image: linear-gradient(to bottom, black, transparent 90%);
 }
 
 .site-header,
@@ -105,7 +107,7 @@ main,
   margin-top: 12px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(3, 10, 24, 0.9);
+  background: rgba(8, 18, 36, 0.88);
   padding: 12px 14px;
   box-shadow: var(--shadow);
   backdrop-filter: blur(18px);
@@ -340,14 +342,14 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface);
-  box-shadow: var(--shadow);
+  box-shadow: 0 22px 64px rgba(0, 0, 0, 0.42);
 }
 
 .hero-panel {
   padding: 24px;
   background:
-    linear-gradient(145deg, rgba(14, 165, 233, 0.16), transparent 42%),
-    rgba(5, 14, 30, 0.9);
+    linear-gradient(145deg, rgba(56, 189, 248, 0.22), transparent 46%),
+    rgba(13, 28, 53, 0.9);
 }
 
 .availability {
@@ -380,7 +382,7 @@ h3 {
 .stat {
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: linear-gradient(145deg, rgba(14, 165, 233, 0.11), rgba(2, 6, 23, 0.72));
+  background: linear-gradient(145deg, rgba(30, 64, 111, 0.9), rgba(12, 27, 52, 0.84));
   padding: 18px;
 }
 
@@ -409,9 +411,9 @@ h3 {
 .timeline-item,
 .skill-card,
 .contact-band {
-  animation: fadeUp both;
+  animation: scrollFade both;
   animation-timeline: view();
-  animation-range: entry 8% cover 34%;
+  animation-range: entry 0% exit 100%;
 }
 
 .section-head.compact {
@@ -503,7 +505,7 @@ h3 {
 }
 
 .education {
-  background: linear-gradient(135deg, rgba(56, 189, 248, 0.16), rgba(2, 6, 23, 0.6));
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.22), rgba(13, 28, 53, 0.9));
 }
 
 .skills-grid {
@@ -517,6 +519,10 @@ h3 {
   gap: 24px;
   margin-block: 40px 76px;
   padding: 30px;
+  background:
+    linear-gradient(135deg, rgba(56, 189, 248, 0.22), rgba(13, 28, 53, 0.92) 46%, rgba(30, 64, 111, 0.86)),
+    var(--surface);
+  border-color: rgba(125, 211, 252, 0.36);
 }
 
 .copy-status {
@@ -558,15 +564,24 @@ h3 {
   }
 }
 
-@keyframes fadeUp {
-  from {
+@keyframes scrollFade {
+  0% {
     opacity: 0;
-    transform: translateY(34px);
+    transform: translateY(56px) scale(0.965);
+    filter: blur(8px);
   }
 
-  to {
+  22%,
+  72% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+
+  100% {
+    opacity: 0.2;
+    transform: translateY(-34px) scale(0.985);
+    filter: blur(4px);
   }
 }
 

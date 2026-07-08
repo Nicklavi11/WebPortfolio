@@ -163,7 +163,7 @@ export class App {
   ];
 
   protected readonly skillGroups = [
-    { title: 'Languages', skills: ['C#', 'C++', 'C', 'Java', 'JavaScript', 'HTML/CSS', 'SQL', 'Python'] },
+    { title: 'Languages', skills: ['C#', 'C++', 'Java', 'JavaScript', 'HTML/CSS', 'SQL', 'Python'] },
     { title: 'Full-Stack + IT', skills: ['.NET Framework', 'User Stories', 'Spike Investigations', 'Troubleshooting', 'Corporate Workflow'] },
     { title: 'Testing + Quality', skills: ['JUnit', 'Pytest', 'Refactoring', 'CI', 'Debugging'] },
     { title: 'Tools + Concepts', skills: ['Git', 'GitHub', 'GitLab', 'Maven', 'CMake', 'OOP', 'SOLID', 'Prompt Engineering', 'AI-First Development'] }
