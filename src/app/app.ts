@@ -17,7 +17,7 @@ export class App {
   ];
 
   protected readonly highlights = [
-    'B.S. Software Engineering, BGSU - Graduating August 8, 2026',
+    'B.S. Software Engineering graduate, BGSU - Aug 2026',
     '3.75 GPA and Dean\'s List recognition',
     'Seeking full-time entry-level software, full-stack, IT, QA, or technical roles',
     'Medical Mutual IT internship experience with .NET, C#, debugging, and user stories',
@@ -26,19 +26,19 @@ export class App {
 
   protected readonly featuredProjects = [
     {
-      title: 'Capstone: Texas Hold\'em Survival Simulation',
-      summary: 'Built a survival poker game mode with full poker flow, chip pressure, blinds, an opponent bot, and probability-assisted decisions.',
-      tags: ['Python', 'Simulation', 'Game Logic', 'Team Project']
+      title: 'Medical Mutual IT Internship',
+      summary: 'Worked in a corporate technical environment with .NET, C#, user stories, spike investigations, debugging, troubleshooting, prompt engineering, and AI-assisted problem solving.',
+      tags: ['.NET', 'C#', 'User Stories', 'Debugging']
     },
     {
       title: 'Website Redesign',
-      summary: 'Modernized a live business website with safer updates, SSL support, backups, broken-link fixes, navigation improvements, and refreshed content.',
+      summary: 'Modernized a live business website with safer updates, SSL support, backups, navigation improvements, content updates, and production-minded testing.',
       tags: ['Web Design', 'Security', 'Client Work']
     },
     {
-      title: 'Open-Source Software Testing',
-      summary: 'Contributed practical Java unit tests to real libraries with JUnit, Maven, Mockito, forks, branches, and pull-request workflows.',
-      tags: ['JUnit', 'Maven', 'Mockito', 'Git']
+      title: 'Texas Hold\'em Survival Simulation',
+      summary: 'Built a poker survival mode with full game flow, 5-10 blinds, 100 vs. 1000 chip pressure, a poker bot opponent, and probability-assisted decisions.',
+      tags: ['Python', 'Simulation', 'Poker Bot', 'Probability']
     }
   ];
 
@@ -132,7 +132,7 @@ export class App {
     {
       role: 'IT Intern',
       org: 'Medical Mutual',
-      date: 'May 2026 - August 2026',
+      date: 'May 2026 - Aug 2026',
       bullets: [
         'Learned and applied .NET framework concepts, C#, debugging, troubleshooting, and corporate development workflows.',
         'Worked with user stories, spike investigations, and technical research to understand and support team delivery.',
@@ -154,7 +154,7 @@ export class App {
     {
       role: 'Certified Trainer',
       org: 'Chipotle',
-      date: '2022 - July 2026',
+      date: '2022 - Jul 2026',
       bullets: [
         'Train new employees on procedures and quality standards in a fast-paced environment.',
         'Practice communication, teamwork, and reliability while balancing college coursework.'

@@ -44,7 +44,7 @@
         <p class="eyebrow">Full-Stack Developer | Entry-Level Technical Candidate</p>
         <h1>Developer ready to build, learn, and contribute on day one.</h1>
         <p class="lead">
-          Hi, I'm Nicholas Laviano. I am graduating with a software engineering degree on August 8, 2026, and I am looking for a full-time technical role where I can grow into a strong full-stack developer. I care about clean code, useful software, clear communication, and solving problems with steady effort.
+          Hi, I'm Nicholas Laviano, a software engineering graduate looking for a full-time technical role. I want to grow into a strong full-stack developer, contribute to real teams, and build software that is clean, useful, and dependable.
         </p>
 
         <div class="hero-actions">
@@ -72,16 +72,16 @@
 
     <section class="section-band stats-band" aria-label="Portfolio snapshot">
       <div class="stat">
-        <strong>7</strong>
-        <span>Featured projects</span>
+        <strong>3</strong>
+        <span>Focused stories</span>
       </div>
       <div class="stat">
         <strong>3.75</strong>
         <span>BGSU GPA</span>
       </div>
       <div class="stat">
-        <strong>Aug 8</strong>
-        <span>Graduation date</span>
+        <strong>Aug 2026</strong>
+        <span>BGSU graduate</span>
       </div>
       <div class="stat">
         <strong>2025+</strong>
@@ -92,9 +92,9 @@
     <section id="projects" class="section-band">
       <div class="section-head">
         <p class="eyebrow">Selected work</p>
-        <h2>Projects with real engineering practice behind them.</h2>
+        <h2>Three stories that show how I work.</h2>
         <p>
-          These projects show software design, testing, refactoring, research, security updates, and team-based delivery.
+          A focused snapshot of my internship experience, client-facing web work, and capstone development. The deeper project details can live on the dedicated projects page as we keep refining the site.
         </p>
       </div>
 
@@ -111,39 +111,6 @@
           </article>
         }
       </div>
-
-      <div class="project-grid">
-        @for (project of projects; track project.title) {
-          <article class="project-card">
-            <div>
-              <h3>{{ project.title }}</h3>
-              <p>{{ project.summary }}</p>
-            </div>
-
-            <ul>
-              @for (bullet of project.bullets; track bullet) {
-                <li>{{ bullet }}</li>
-              }
-            </ul>
-
-            <div class="tags">
-              @for (tag of project.tags; track tag) {
-                <span>{{ tag }}</span>
-              }
-            </div>
-
-            <div class="card-links">
-              @for (link of project.links; track link.label) {
-                @if (link.href) {
-                  <a [href]="link.href" target="_blank" rel="noreferrer">{{ link.label }}</a>
-                } @else {
-                  <span>{{ link.label }}</span>
-                }
-              }
-            </div>
-          </article>
-        }
-      </div>
     </section>
 
     <section id="experience" class="section-band split-section">
@@ -151,7 +118,7 @@
         <p class="eyebrow">Experience + education</p>
         <h2>Internship experience, client work, and a software engineering foundation.</h2>
         <p>
-          I am finishing my Software Engineering degree at Bowling Green State University while building practical experience through an IT internship, client web work, team projects, testing, and design.
+          I completed my Software Engineering degree at Bowling Green State University while building practical experience through an IT internship, client web work, team projects, testing, and design.
         </p>
       </div>
 
@@ -170,7 +137,7 @@
         }
 
         <article class="timeline-item education">
-          <p class="date">Graduating August 8, 2026</p>
+          <p class="date">Aug 2026</p>
           <h3>B.S. Software Engineering</h3>
           <p class="org">Bowling Green State University</p>
           <p>GPA: 3.75 | Dean's List</p>
