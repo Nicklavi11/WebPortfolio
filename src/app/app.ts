@@ -1,11 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { AfterViewInit, Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
+export class App implements AfterViewInit {
   protected readonly currentYear = new Date().getFullYear();
   protected readonly mobileNavOpen = signal(false);
   protected readonly copyStatus = signal('');
@@ -175,6 +175,35 @@ export class App {
 
   protected closeMobileNav(): void {
     this.mobileNavOpen.set(false);
+  }
+
+  ngAfterViewInit(): void {
+    const revealItems = document.querySelectorAll<HTMLElement>(
+      '.section-head, .stat, .feature-card, .timeline-item, .skill-card, .contact-band'
+    );
+
+    if (!('IntersectionObserver' in window)) {
+      revealItems.forEach((item) => item.classList.add('reveal-visible'));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('reveal-visible');
+          } else {
+            entry.target.classList.remove('reveal-visible');
+          }
+        });
+      },
+      {
+        threshold: 0.18,
+        rootMargin: '0px 0px -8% 0px'
+      }
+    );
+
+    revealItems.forEach((item) => observer.observe(item));
   }
 
   protected async copyEmail(): Promise<void> {
