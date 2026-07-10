@@ -65,21 +65,24 @@ input {
 }
 
 .home-shell {
-  display: grid;
-  grid-template-columns: minmax(280px, 0.82fr) minmax(0, 1.18fr);
-  gap: clamp(56px, 9vw, 120px);
-  align-items: start;
+  --sidebar-width: min(400px, 38vw);
+  --split-gap: clamp(56px, 9vw, 120px);
+  display: block;
   min-height: 100vh;
+  position: relative;
 }
 
 .intro-panel {
-  position: sticky;
+  position: fixed;
+  left: max(18px, calc((100vw - var(--max)) / 2));
   top: 0;
   display: flex;
+  width: var(--sidebar-width);
   min-height: 100vh;
   flex-direction: column;
   justify-content: space-between;
   padding-block: 88px 56px;
+  z-index: 2;
 }
 
 .brand-pill {
@@ -244,6 +247,7 @@ p {
 .scroll-column {
   display: grid;
   gap: 82px;
+  margin-left: calc(var(--sidebar-width) + var(--split-gap));
   padding-block: 88px 56px;
 }
 
@@ -596,6 +600,7 @@ td a:hover {
 
   .intro-panel {
     position: static;
+    width: auto;
     min-height: auto;
     padding-block: 42px 28px;
   }
@@ -607,6 +612,7 @@ td a:hover {
 
   .scroll-column {
     gap: 56px;
+    margin-left: 0;
     padding-block: 28px 34px;
   }
 
