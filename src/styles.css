@@ -258,13 +258,13 @@ p {
 
 .scroll-column {
   display: grid;
-  gap: 74px;
+  gap: 54px;
   padding-block: 72px 42px;
 }
 
 .page-section {
   display: grid;
-  gap: 22px;
+  gap: 18px;
 }
 
 .section-heading p,
@@ -276,7 +276,7 @@ p {
 .timeline-list,
 .project-stack {
   display: grid;
-  gap: 16px;
+  gap: 14px;
 }
 
 .timeline-card,
@@ -297,8 +297,8 @@ p {
 .timeline-card,
 .project-card {
   display: grid;
-  gap: 14px;
-  padding: 22px;
+  gap: 12px;
+  padding: 20px;
   transition: transform 200ms var(--ease), border-color 200ms var(--ease), background 200ms var(--ease);
 }
 
@@ -356,10 +356,25 @@ ul {
 .resume-panel,
 .contact-cta {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.72fr);
   align-items: center;
-  gap: 24px;
-  padding: 26px;
+  gap: 22px;
+  padding: 24px;
+}
+
+.resume-panel {
+  grid-template-columns: minmax(0, 1fr) auto;
+  padding: 20px;
+}
+
+.resume-panel h2,
+.contact-cta h2 {
+  font-size: clamp(1.55rem, 3vw, 2.35rem);
+}
+
+.resume-panel p,
+.contact-cta p {
+  margin-bottom: 0;
 }
 
 .btn {
@@ -407,6 +422,7 @@ ul {
 .email-capture {
   display: grid;
   gap: 10px;
+  min-width: 0;
 }
 
 label {
@@ -422,7 +438,8 @@ label {
 }
 
 .email-capture div {
-  grid-template-columns: minmax(220px, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  min-width: 0;
 }
 
 input {
@@ -433,6 +450,7 @@ input {
   background: rgba(3, 10, 24, 0.68);
   color: var(--text);
   padding: 0 16px;
+  min-width: 0;
 }
 
 input::placeholder {
@@ -536,6 +554,14 @@ td a:hover {
   flex-direction: column;
 }
 
+.earlier-note {
+  margin: 0;
+  border-left: 2px solid rgba(94, 234, 212, 0.55);
+  color: var(--quiet);
+  padding-left: 14px;
+  font-size: 0.94rem;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(34px);
@@ -603,6 +629,7 @@ td a:hover {
   }
 
   .scroll-column {
+    gap: 42px;
     padding-block: 28px 34px;
   }
 
@@ -610,6 +637,11 @@ td a:hover {
   .contact-cta,
   .contact-card {
     grid-template-columns: 1fr;
+  }
+
+  .resume-panel .btn,
+  .contact-cta .btn {
+    width: fit-content;
   }
 }
 
@@ -624,6 +656,11 @@ td a:hover {
 
   .email-capture div {
     grid-template-columns: 1fr;
+  }
+
+  .resume-panel .btn,
+  .contact-cta .btn {
+    width: 100%;
   }
 
   table,
