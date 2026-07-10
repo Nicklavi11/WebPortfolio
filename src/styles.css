@@ -85,37 +85,6 @@ input {
   z-index: 2;
 }
 
-.brand-pill {
-  display: inline-flex;
-  width: fit-content;
-  align-items: center;
-  gap: 10px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: transparent;
-  color: var(--muted);
-  padding: 8px 12px 8px 8px;
-  text-decoration: none;
-  transition: transform 180ms var(--ease), border-color 180ms var(--ease), color 180ms var(--ease);
-}
-
-.brand-pill:hover {
-  transform: translateY(-2px);
-  border-color: rgba(94, 234, 212, 0.56);
-  color: var(--text);
-}
-
-.brand-pill span {
-  display: grid;
-  width: 34px;
-  height: 34px;
-  place-items: center;
-  border-radius: 999px;
-  background: var(--accent);
-  color: #031321;
-  font-weight: 900;
-}
-
 .intro-copy {
   display: grid;
   gap: 16px;
@@ -253,7 +222,7 @@ p {
 
 .page-section {
   display: grid;
-  gap: 28px;
+  gap: 18px;
 }
 
 .section-heading p,
@@ -270,7 +239,6 @@ p {
 
 .timeline-card,
 .project-card,
-.resume-panel,
 .contact-cta,
 .contact-card,
 .archive {
@@ -340,7 +308,6 @@ ul {
   font-weight: 750;
 }
 
-.resume-panel,
 .contact-cta {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 0.72fr);
@@ -349,17 +316,10 @@ ul {
   padding: 26px;
 }
 
-.resume-panel {
-  grid-template-columns: minmax(0, 1fr) auto;
-  padding: 20px;
-}
-
-.resume-panel h2,
 .contact-cta h2 {
   font-size: clamp(1.55rem, 3vw, 2.35rem);
 }
 
-.resume-panel p,
 .contact-cta p {
   margin-bottom: 0;
 }
@@ -396,6 +356,26 @@ ul {
   align-items: center;
   gap: 10px;
   font-weight: 850;
+}
+
+.resume-link {
+  width: fit-content;
+  color: var(--accent);
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.resume-link:hover {
+  color: var(--text);
+}
+
+.subtle-section-title {
+  margin: 0;
+  color: var(--quiet);
+  font-size: 0.82rem;
+  font-weight: 850;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .archive-link span {
@@ -541,14 +521,6 @@ td a:hover {
   flex-direction: column;
 }
 
-.earlier-note {
-  margin: 0;
-  border-left: 2px solid rgba(94, 234, 212, 0.55);
-  color: var(--quiet);
-  padding-left: 14px;
-  font-size: 0.94rem;
-}
-
 .reveal {
   opacity: 0;
   transform: translateY(34px);
@@ -616,13 +588,11 @@ td a:hover {
     padding-block: 28px 34px;
   }
 
-  .resume-panel,
   .contact-cta,
   .contact-card {
     grid-template-columns: 1fr;
   }
 
-  .resume-panel .btn,
   .contact-cta .btn {
     width: fit-content;
   }
@@ -641,7 +611,6 @@ td a:hover {
     grid-template-columns: 1fr;
   }
 
-  .resume-panel .btn,
   .contact-cta .btn {
     width: 100%;
   }

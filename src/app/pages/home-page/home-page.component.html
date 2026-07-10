@@ -3,46 +3,21 @@
 
   <main class="scroll-column" id="main">
     <section id="experience" class="page-section">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Experience</p>
-        <h2>Enterprise development, real codebases, and practical problem solving.</h2>
-        <p>
-          I'm finishing my Software Engineering degree in August 2026 after gaining hands-on experience with .NET MVC, C#, RESTful APIs, Sitecore, Agile/Scrum workflow, troubleshooting, and AI-assisted development.
-        </p>
-      </div>
+      <h2 class="subtle-section-title reveal">Experience</h2>
 
       <div class="timeline-list">
         @for (experience of experienceItems; track experience.role) {
           <app-experience-card [experience]="experience" />
         }
       </div>
-
-      <p class="earlier-note reveal">
-        Earlier experience: Certified Trainer at Chipotle, building communication, accountability, and team coordination skills from 2022 to 2026.
-      </p>
     </section>
 
-    <section id="resume" class="resume-panel reveal">
-      <div>
-        <p class="eyebrow">Resume</p>
-        <h2>View the full resume</h2>
-        <p>
-          A one-page snapshot of my internship experience, projects, and technical skills.
-        </p>
-      </div>
-      <a class="btn primary" href="assets/docs/Nicholas_Laviano_Resume.pdf" target="_blank" rel="noreferrer">
-        Download Resume
-      </a>
-    </section>
+    <a id="resume" class="resume-link reveal" href="assets/docs/Nicholas_Laviano_Resume.pdf" target="_blank" rel="noreferrer">
+      View full resume
+    </a>
 
     <section id="projects" class="page-section">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Featured projects</p>
-        <h2>Three projects that show how I learn, build, and debug.</h2>
-        <p>
-          These are the best snapshots of my current developer story: internship-style technical work, real client maintenance, and a substantial capstone project.
-        </p>
-      </div>
+      <h2 class="subtle-section-title reveal">Featured projects</h2>
 
       <div class="project-stack">
         @for (project of featuredProjects; track project.slug) {
