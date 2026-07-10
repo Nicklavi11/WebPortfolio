@@ -1,0 +1,38 @@
+<div id="top" class="site-shell page-shell contact-page">
+  <header class="page-header reveal reveal-visible">
+    <a class="brand-pill" routerLink="/">
+      <span>NL</span>
+      Home
+    </a>
+    <p class="eyebrow">Contact</p>
+    <h1>Let’s connect.</h1>
+    <p>
+      I’m looking for entry-level software developer and software engineering opportunities where I can contribute to real systems, keep learning, and bring strong troubleshooting, communication, and AI-assisted development skills to a team.
+    </p>
+  </header>
+
+  <main class="contact-card reveal reveal-visible">
+    <form class="contact-form">
+      <label for="contactEmail">Your email</label>
+      <input
+        id="contactEmail"
+        type="email"
+        placeholder="you@company.com"
+        [value]="email()"
+        (input)="updateEmail($any($event.target).value)"
+      />
+      <a class="btn primary" [href]="mailtoHref()">Open Email App</a>
+      <p class="muted">
+        This portfolio is static, so this button opens your email app instead of submitting to a backend.
+      </p>
+      <!-- Future form-service placeholder: wire this form to a static form provider if needed later. -->
+    </form>
+
+    <div class="contact-links">
+      <a href="mailto:nlavian@bgsu.edu">nlavian@bgsu.edu</a>
+      @for (link of socialLinks; track link.label) {
+        <a [href]="link.href" target="_blank" rel="noreferrer">{{ link.label }}</a>
+      }
+    </div>
+  </main>
+</div>

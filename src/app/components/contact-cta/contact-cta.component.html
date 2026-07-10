@@ -1,0 +1,24 @@
+<section class="contact-cta reveal">
+  <div>
+    <p class="eyebrow">Next step</p>
+    <h2>Have a role where I could contribute?</h2>
+    <p>
+      I am looking for entry-level software developer and software engineering opportunities where I can learn quickly, communicate clearly, and help maintain real systems.
+    </p>
+  </div>
+
+  <form (ngSubmit)="goToContact()" class="email-capture">
+    <label for="ctaEmail">Your email</label>
+    <div>
+      <input
+        id="ctaEmail"
+        type="email"
+        name="email"
+        placeholder="recruiter@company.com"
+        [value]="email()"
+        (input)="updateEmail($any($event.target).value)"
+      />
+      <button class="btn primary" type="submit">Contact Me</button>
+    </div>
+  </form>
+</section>

@@ -1,0 +1,25 @@
+<aside class="intro-panel">
+  <a class="brand-pill" routerLink="/" aria-label="Nicholas Laviano home">
+    <span>NL</span>
+    Portfolio
+  </a>
+
+  <div class="intro-copy">
+    <p class="eyebrow">Software Developer</p>
+    <h1>Nicholas Laviano</h1>
+    <p class="role-line">
+      Software Developer focused on maintainable systems, practical problem solving, and AI-assisted development.
+    </p>
+    <p class="intro-summary">
+      I build maintainable software, troubleshoot real systems, and use modern tools like .NET, C#, Angular, and AI-assisted development to solve practical problems.
+    </p>
+  </div>
+
+  <app-section-nav [sections]="sections" />
+
+  <div class="social-row" aria-label="Profile links">
+    @for (link of socialLinks; track link.label) {
+      <a [href]="link.href" target="_blank" rel="noreferrer">{{ link.label }}</a>
+    }
+  </div>
+</aside>

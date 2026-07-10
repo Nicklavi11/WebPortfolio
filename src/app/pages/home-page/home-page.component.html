@@ -1,0 +1,61 @@
+<div id="top" class="site-shell home-shell">
+  <app-intro-panel [sections]="navSections" [socialLinks]="socialLinks" />
+
+  <main class="scroll-column" id="main">
+    <section id="experience" class="page-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Experience</p>
+        <h2>Corporate workflow, client work, and steady team experience.</h2>
+        <p>
+          I am finishing my Software Engineering degree in Aug 2026 with hands-on experience in enterprise development, Agile/Scrum workflow, troubleshooting, and AI-assisted coding.
+        </p>
+      </div>
+
+      <div class="timeline-list">
+        @for (experience of experienceItems; track experience.role) {
+          <app-experience-card [experience]="experience" />
+        }
+      </div>
+    </section>
+
+    <section id="resume" class="resume-panel reveal">
+      <div>
+        <p class="eyebrow">Resume</p>
+        <h2>Want the detailed version?</h2>
+        <p>
+          My resume includes education, internship experience, project work, tools, and technical skills in a format recruiters can keep handy.
+        </p>
+      </div>
+      <a class="btn primary" href="assets/docs/Nicholas_Laviano_Resume.pdf" target="_blank" rel="noreferrer">
+        Download Resume
+      </a>
+    </section>
+
+    <section id="projects" class="page-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Featured projects</p>
+        <h2>Three projects that show how I learn, build, and debug.</h2>
+        <p>
+          These are the best snapshots of my current developer story: internship-style technical work, real client maintenance, and a substantial capstone project.
+        </p>
+      </div>
+
+      <div class="project-stack">
+        @for (project of featuredProjects; track project.slug) {
+          <app-project-card [project]="project" />
+        }
+      </div>
+
+      <a class="archive-link reveal" routerLink="/projects">
+        View full project archive
+        <span aria-hidden="true">→</span>
+      </a>
+    </section>
+
+    <section id="contact">
+      <app-contact-cta />
+    </section>
+
+    <app-site-footer />
+  </main>
+</div>

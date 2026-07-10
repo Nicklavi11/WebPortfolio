@@ -1,0 +1,30 @@
+<article class="project-card reveal">
+  <div class="card-topline">
+    <span>{{ project.type }}</span>
+    <span>{{ project.year }}</span>
+  </div>
+  <h3>{{ project.title }}</h3>
+  <p>{{ project.shortDescription }}</p>
+
+  <ul>
+    @for (highlight of project.highlights; track highlight) {
+      <li>{{ highlight }}</li>
+    }
+  </ul>
+
+  <div class="tag-list">
+    @for (tag of project.tags; track tag) {
+      <span>{{ tag }}</span>
+    }
+  </div>
+
+  <div class="link-list">
+    @if (project.links.length) {
+      @for (link of project.links; track link.label) {
+        <a [href]="link.href" target="_blank" rel="noreferrer">{{ link.label }}</a>
+      }
+    } @else {
+      <span>Details coming soon</span>
+    }
+  </div>
+</article>

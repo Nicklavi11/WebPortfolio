@@ -1,0 +1,8 @@
+<nav class="section-nav" aria-label="Page sections">
+  @for (section of sections; track section.id) {
+    <a [href]="'#' + section.id" [class.active]="activeSection() === section.id">
+      <span></span>
+      {{ section.label }}
+    </a>
+  }
+</nav>

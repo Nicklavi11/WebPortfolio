@@ -34,6 +34,9 @@ jobs:
       - name: Build Angular app
         run: npm run build
 
+      - name: Add GitHub Pages route fallback
+        run: cp dist/nicholas-laviano-portfolio/browser/index.html dist/nicholas-laviano-portfolio/browser/404.html
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

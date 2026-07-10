@@ -1,0 +1,41 @@
+<section class="archive reveal" aria-label="Project archive">
+  <table>
+    <thead>
+      <tr>
+        <th>Year</th>
+        <th>Project</th>
+        <th>Type</th>
+        <th>Built With</th>
+        <th>Links</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (project of projects; track project.slug) {
+        <tr>
+          <td data-label="Year">{{ project.year }}</td>
+          <td data-label="Project">
+            <strong>{{ project.title }}</strong>
+            <span>{{ project.shortDescription }}</span>
+          </td>
+          <td data-label="Type">{{ project.type }}</td>
+          <td data-label="Built With">
+            <div class="compact-tags">
+              @for (tag of project.tags; track tag) {
+                <span>{{ tag }}</span>
+              }
+            </div>
+          </td>
+          <td data-label="Links">
+            @if (project.links.length) {
+              @for (link of project.links; track link.label) {
+                <a [href]="link.href" target="_blank" rel="noreferrer">{{ link.label }}</a>
+              }
+            } @else {
+              <span class="muted">Soon</span>
+            }
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</section>
