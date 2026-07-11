@@ -34,6 +34,17 @@ export const projects: Project[] = [
     featured: true
   },
   {
+    year: '2026',
+    title: 'Angular Portfolio Redesign',
+    slug: 'angular-portfolio-redesign',
+    type: 'Frontend Portfolio',
+    shortDescription:
+      'Rebuilt a static portfolio as a routed Angular application with reusable data files, responsive pages, and maintainable component structure.',
+    highlights: ['Built with Angular routing, reusable components, CSS variables, and responsive layouts.'],
+    tags: ['Angular', 'TypeScript', 'CSS', 'Responsive Design'],
+    links: [{ label: 'GitHub', href: 'https://github.com/Nicklavi11/WebPortfolio' }]
+  },
+  {
     year: '2025',
     title: 'Zone Aviation Website Redesign',
     slug: 'zone-aviation-redesign',
@@ -69,17 +80,6 @@ export const projects: Project[] = [
     featured: true
   },
   {
-    year: '2026',
-    title: 'Angular Portfolio Redesign',
-    slug: 'angular-portfolio-redesign',
-    type: 'Frontend Portfolio',
-    shortDescription:
-      'Rebuilt a static portfolio as a routed Angular application with reusable data files, responsive pages, and maintainable component structure.',
-    highlights: ['Built with Angular routing, reusable components, CSS variables, and responsive layouts.'],
-    tags: ['Angular', 'TypeScript', 'CSS', 'Responsive Design'],
-    links: [{ label: 'GitHub', href: 'https://github.com/Nicklavi11/WebPortfolio' }]
-  },
-  {
     year: '2025',
     title: 'Chart Generator Design Case Study',
     slug: 'chart-generator-design-case-study',
@@ -99,7 +99,7 @@ export const projects: Project[] = [
       'Improved maintainability in an existing C++ codebase using responsibility-focused refactoring and pull-request workflow.',
     highlights: ['Applied Extract Method, Move Method, inheritance, and branch-based team review.'],
     tags: ['C++', 'Refactoring', 'OOP', 'Git'],
-    links: []
+    links: [{ label: 'Private', href: '' }]
   },
   {
     year: '2025',

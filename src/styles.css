@@ -242,6 +242,10 @@ p {
   gap: 18px;
 }
 
+#experience {
+  gap: 20px;
+}
+
 .section-heading p,
 .page-header p,
 .contact-cta p {
@@ -470,7 +474,7 @@ input::placeholder {
 
 .page-shell {
   display: grid;
-  gap: 32px;
+  gap: 44px;
   padding-block: 58px 36px;
 }
 
@@ -479,6 +483,11 @@ input::placeholder {
   align-items: flex-start;
   justify-content: space-between;
   gap: 24px;
+}
+
+.page-header > div {
+  display: grid;
+  gap: 18px;
 }
 
 .page-header h1 {
@@ -537,12 +546,33 @@ td a:hover {
   color: var(--accent);
 }
 
+td[data-label="Links"] a,
+td[data-label="Links"] .muted {
+  display: block;
+  width: fit-content;
+  margin-top: 0;
+  margin-bottom: 9px;
+}
+
+td[data-label="Links"] a:last-child,
+td[data-label="Links"] .muted:last-child {
+  margin-bottom: 0;
+}
+
 .muted {
   color: var(--quiet);
 }
 
 .contact-page {
   max-width: 920px;
+}
+
+.contact-page .page-header {
+  margin-bottom: 8px;
+}
+
+.contact-page .page-header p {
+  margin-top: 4px;
 }
 
 .contact-card {
