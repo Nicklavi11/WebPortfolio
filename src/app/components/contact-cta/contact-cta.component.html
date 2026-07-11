@@ -1,13 +1,10 @@
 <section class="contact-cta reveal">
   <div>
-    <p class="eyebrow">Next step</p>
-    <h2>Have a role where I could contribute?</h2>
-    <p>
-      I am looking for entry-level software developer and software engineering opportunities where I can learn quickly, communicate clearly, and help maintain real systems.
-    </p>
+    <h2>Interested?</h2>
+    <p>Drop your email and I’ll make it easy to start a conversation.</p>
   </div>
 
-  <form (ngSubmit)="goToContact()" class="email-capture" aria-label="Start a contact message">
+  <form (submit)="goToContact($event)" class="email-capture" aria-label="Start a contact message">
     <label for="ctaEmail">Your email</label>
     <div>
       <input
@@ -18,7 +15,7 @@
         [value]="email()"
         (input)="updateEmail($any($event.target).value)"
       />
-      <button class="btn primary" type="submit">Contact Me</button>
+      <button class="btn primary" type="submit">Contact</button>
     </div>
   </form>
 </section>

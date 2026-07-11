@@ -12,12 +12,12 @@ export const experienceItems: ExperienceItem[] = [
     organization: 'Medical Mutual',
     date: 'Summer 2026',
     description:
-      'Worked on a corporate Scrum team while learning enterprise development practices, .NET MVC, C#, API work, troubleshooting, and AI-assisted software development.',
+      'Worked on a corporate Scrum team while learning enterprise development practices, .NET MVC, C#, API work, troubleshooting, and responsible use of AI-enabled developer tools.',
     highlights: [
       'Contributed to Agile/Scrum stories while learning corporate development workflow and team collaboration.',
       'Researched code behavior, traced issues, and documented findings through spike-style investigation work.',
       'Practiced code walkthroughs, demos, and technical communication with team members.',
-      'Used GitHub Copilot and AI-assisted development tools to support implementation, code research, debugging, and prompt-driven learning.'
+      'Used GitHub Copilot and AI tools to support code research, debugging, implementation, and faster learning while keeping the work grounded in understanding the code.'
     ]
   },
   {

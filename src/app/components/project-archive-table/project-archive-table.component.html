@@ -28,7 +28,11 @@
           <td data-label="Links">
             @if (project.links.length) {
               @for (link of project.links; track link.label) {
-                <a [href]="link.href" target="_blank" rel="noreferrer">{{ link.label }}</a>
+                @if (link.href) {
+                  <a [href]="link.href" target="_blank" rel="noreferrer">{{ link.label }}</a>
+                } @else {
+                  <span class="muted">{{ link.label }}</span>
+                }
               }
             } @else {
               <span class="muted">Soon</span>

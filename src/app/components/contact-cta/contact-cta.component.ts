@@ -14,7 +14,8 @@ export class ContactCtaComponent {
     this.email.set(value);
   }
 
-  protected goToContact(): void {
+  protected goToContact(event: SubmitEvent): void {
+    event.preventDefault();
     const email = this.email().trim();
     this.router.navigate(['/contact'], {
       queryParams: email ? { email } : undefined

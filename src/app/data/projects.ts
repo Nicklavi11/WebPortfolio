@@ -20,7 +20,7 @@ export const projects: Project[] = [
     year: '2026',
     title: 'Texas Hold\'em Trainer',
     slug: 'texas-holdem-trainer',
-    type: 'Team Capstone Project',
+    type: 'Capstone',
     shortDescription:
       'A Python-based poker trainer that simulates heads-up Texas Hold\'em hands and helps users practice push/fold decisions using probability, stack management, and game-state logic.',
     highlights: [
@@ -29,8 +29,8 @@ export const projects: Project[] = [
       'Contributed through GitLab workflow, sprint reviews, testing, debugging, and team collaboration.',
       'Helped make the trainer more interactive through sandbox/random training flow and survival mode logic.'
     ],
-    tags: ['Python', 'Pytest', 'GitLab', 'Probability', 'Game Logic', 'Team Capstone'],
-    links: [],
+    tags: ['Python', 'Pytest', 'GitLab', 'Probability', 'Game Logic', 'Capstone'],
+    links: [{ label: 'Private', href: '' }],
     featured: true
   },
   {
