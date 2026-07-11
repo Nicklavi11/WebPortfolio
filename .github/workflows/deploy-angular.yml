@@ -3,7 +3,7 @@ name: Deploy Angular Portfolio
 on:
   push:
     branches:
-      - main
+      - angular-redesign
   workflow_dispatch:
 
 permissions:
@@ -17,7 +17,6 @@ concurrency:
 
 jobs:
   build:
-    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -44,7 +43,6 @@ jobs:
           path: dist/nicholas-laviano-portfolio/browser
 
   deploy:
-    if: github.ref == 'refs/heads/main'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
