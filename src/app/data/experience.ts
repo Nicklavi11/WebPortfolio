@@ -17,7 +17,7 @@ export const experienceItems: ExperienceItem[] = [
       'Contributed to Agile/Scrum stories while learning corporate development workflow and team collaboration.',
       'Researched code behavior, traced issues, and documented findings through spike-style investigation work.',
       'Practiced code walkthroughs, demos, and technical communication with team members.',
-      'Used GitHub Copilot and AI tools to support code research, debugging, implementation, and faster learning while keeping the work grounded in understanding the code.'
+      'Used AI development tools to support code research, debugging, implementation, and faster learning while keeping the work grounded in understanding the code.'
     ]
   },
   {
