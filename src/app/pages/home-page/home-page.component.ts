@@ -22,7 +22,7 @@ import { socialLinks } from '../../data/social-links';
   templateUrl: './home-page.component.html'
 })
 export class HomePageComponent implements AfterViewInit {
-  protected readonly experienceItems = experienceItems.filter((experience) => experience.organization !== 'Chipotle');
+  protected readonly experienceItems = experienceItems;
   protected readonly featuredProjects = featuredProjects;
   protected readonly socialLinks = socialLinks;
   protected readonly navSections = [

@@ -10,14 +10,14 @@ export const experienceItems: ExperienceItem[] = [
   {
     role: 'IT Summer Intern',
     organization: 'Medical Mutual',
-    date: 'Summer 2026',
+    date: 'May 2026 - Aug. 2026',
     description:
-      'Worked on a corporate Scrum team while learning enterprise development practices, .NET MVC, C#, API work, troubleshooting, and responsible use of AI-enabled developer tools.',
+      'Worked on an enterprise Scrum team using C#, .NET MVC, RESTful APIs, Sitecore CMS, troubleshooting, and AI-assisted development tools.',
     highlights: [
-      'Contributed to Agile/Scrum stories while learning corporate development workflow and team collaboration.',
-      'Researched code behavior, traced issues, and documented findings through spike-style investigation work.',
-      'Practiced code walkthroughs, demos, and technical communication with team members.',
-      'Used AI development tools to support code research, debugging, implementation, and faster learning while keeping the work grounded in understanding the code.'
+      'Integrated an updated RESTful API by updating configuration and controller logic in an existing .NET MVC application, testing connectivity while preserving existing behavior.',
+      'Read and traced unfamiliar C# code to troubleshoot issues, validate endpoint behavior, and document technical findings.',
+      'Configured Sitecore items and connected new products to backend logic for product-specific effective dates, enrollment flow behavior, and Sitecore-controlled job flags.',
+      'Contributed through Agile/Scrum stories, testing, demos, code walkthroughs, and GitHub Copilot-assisted research.'
     ]
   },
   {
@@ -30,17 +30,6 @@ export const experienceItems: ExperienceItem[] = [
       'Updated site content, pricing, navigation, and visual elements based on client requirements.',
       'Managed backups, local testing, WordPress updates, SSL/security concerns, and production changes.',
       'Improved reliability by testing changes before applying them to the live site.'
-    ]
-  },
-  {
-    role: 'Certified Trainer',
-    organization: 'Chipotle',
-    date: '2022 to 2026',
-    description:
-      'Trained new employees while balancing college coursework and software projects, strengthening communication, leadership, and reliability.',
-    highlights: [
-      'Trained employees on procedures, standards, and workflows in a fast-paced environment.',
-      'Built communication, accountability, and team coordination skills.'
     ]
   }
 ];

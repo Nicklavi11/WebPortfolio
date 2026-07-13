@@ -10,7 +10,7 @@ import { socialLinks } from '../../data/social-links';
 export class ContactPageComponent implements OnInit {
   protected readonly email = signal('');
   protected readonly socialLinks = socialLinks;
-  protected readonly myEmail = 'nlavian@bgsu.edu';
+  protected readonly myEmail = 'nmlaviano@gmail.com';
 
   constructor(private readonly route: ActivatedRoute) {}
 

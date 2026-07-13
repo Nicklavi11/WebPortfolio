@@ -3,7 +3,7 @@ name: Deploy Angular Portfolio
 on:
   push:
     branches:
-      - angular-redesign
+      - main
   workflow_dispatch:
 
 permissions:

@@ -1,38 +1,34 @@
-# Nicholas Laviano Portfolio - Angular Redesign
+# Nicholas Laviano Portfolio
 
-This branch rebuilds the portfolio as a modern Angular application. The old root-level static HTML pages were replaced with a component-driven Angular app in `src/`.
+A responsive developer portfolio for Nicholas Laviano.
 
-## Run Locally
+**Technology:** Angular, TypeScript, CSS
+
+## Local Setup
 
 ```bash
-npm install
+npm ci
 npm start
 ```
 
-Then open `http://localhost:4200/`.
-
-## Build
+## Production Build
 
 ```bash
 npm run build
 ```
 
-The production site is generated in:
+## Live Site
 
-```text
-dist/nicholas-laviano-portfolio/browser
-```
+[nicholaslaviano.dev](https://nicholaslaviano.dev)
 
-## Deploy
+## Deployment
 
-This branch includes `.github/workflows/deploy-angular.yml`. When the `angular-redesign` branch is pushed, GitHub Actions installs dependencies, builds the Angular app, and deploys the compiled output to GitHub Pages.
+Pushes to `main` trigger GitHub Actions, which builds the Angular app and deploys `dist/nicholas-laviano-portfolio/browser` to GitHub Pages.
 
-The custom domain is preserved through `public/CNAME`.
+## Project Structure
 
-## Where Things Live
-
-- `src/app/app.ts` stores the portfolio data and interaction logic.
-- `src/app/app.html` renders the page using Angular template syntax.
-- `src/styles.css` contains the full responsive visual design.
-- `public/assets/docs/` contains the resume and project PDFs.
-- `public/icons/favicon.svg` contains the site icon.
+- `src/app/data` contains portfolio content.
+- `src/app/components` contains reusable components.
+- `src/app/pages` contains routed pages.
+- `public/assets/docs` contains the resume and project reports.
+- `public/CNAME` configures the custom domain.
