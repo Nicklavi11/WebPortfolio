@@ -1,7 +1,12 @@
 <article class="timeline-card reveal">
   <p class="meta">{{ experience.date }}</p>
   <h3>{{ experience.role }}</h3>
-  <p class="organization">{{ experience.organization }}</p>
+  <p class="organization">
+    {{ experience.organization }}
+    @if (experience.location) {
+      <span aria-hidden="true"> &middot; </span>{{ experience.location }}
+    }
+  </p>
   <p>{{ experience.description }}</p>
   <ul>
     @for (highlight of experience.highlights; track highlight) {
